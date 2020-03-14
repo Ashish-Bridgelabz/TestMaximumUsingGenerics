@@ -3,9 +3,11 @@ public class Maximum<E extends Comparable<E>> {
     E secondValue;
     E thirdValue;
 
+    //Default constructor
     public Maximum() {
     }
 
+    //Paramrtrized constructor
     public Maximum(E firstValue, E secondValue, E thirdValue) {
         this.firstValue = firstValue;
         this.secondValue = secondValue;
@@ -22,8 +24,13 @@ public class Maximum<E extends Comparable<E>> {
             return thirdValue;
     }
 
-    //Test method to internally call
+    //Internal call find maximum number
     public <E extends Comparable<E>> E findMaximum() {
+        printMax(findMaximum(firstValue, secondValue, thirdValue));
         return (E) findMaximum(firstValue, secondValue, thirdValue);
+    }
+
+    public void printMax(E findMaximum) {
+        System.out.println("Maximum is:" + findMaximum);
     }
 }
